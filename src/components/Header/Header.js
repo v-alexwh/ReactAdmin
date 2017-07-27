@@ -21,17 +21,14 @@ import history from '../../core/history';
 import $ from "jquery";
 import Sidebar from '../Sidebar';
 
-const logo = require('./logo.png');
-
 function Header() {
   return (
     <div id="wrapper" className="content">
       <Navbar fluid={true}  style={ {margin: 0} }>
           <Brand>
             <span>
-              <img src={logo} alt="Start React" title="Start React" />
-              <span>&nbsp;SB Admin React - </span>
-                <a href="http://startreact.com/" title="Start React" rel="home">StartReact.com</a>
+              <img src="https://sladesportfolio.files.wordpress.com/2015/08/2000px-m_box-svg.png"/>
+              <span>&nbsp;Traffic Management </span>
                 <button type="button" className="navbar-toggle" onClick={() => {toggleMenu();}} style={{position: 'absolute', right: 0, top: 0}}>
                   <span className="sr-only">Toggle navigation</span>
                   <span className="icon-bar"></span>
@@ -41,27 +38,6 @@ function Header() {
             </span>
           </Brand>
           <ul className="nav navbar-top-links navbar-right">
-
-              <NavDropdown bsClass="dropdown" title={<span><i className="fa fa-envelope fa-fw"></i></span>} id="navDropdown1">
-                <MenuItem style={ {width: 300} } eventKey="1">
-                  <div> <strong>John Smith</strong> <span className="pull-right text-muted"> <em>Yesterday</em> </span> </div>
-                  <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                </MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey="2">
-                  <div> <strong>John Smith</strong> <span className="pull-right text-muted"> <em>Yesterday</em> </span> </div>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                </MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey="3">
-                  <div> <strong>John Smith</strong> <span className="pull-right text-muted"> <em>Yesterday</em> </span> </div>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                </MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey="4" className="text-center">
-                  <strong>Read All Messages</strong> <i className="fa fa-angle-right"></i>
-                </MenuItem>
-              </NavDropdown>
 
            <NavDropdown title={<span><i className="fa fa-tasks fa-fw"></i> </span>} id = 'navDropdown2222'>
                   <MenuItem eventKey="1" style={ {width: 300} }>
@@ -139,11 +115,7 @@ function Header() {
                     <span><i className="fa fa-gear fa-fw"></i> Settings </span>
                   </MenuItem>
                   <MenuItem divider />
-                  <MenuItem eventKey = "3" href = 'http://www.strapui.com' >
-                    <span> <i className = "fa fa-eye fa-fw" /> Premium React Themes </span>
-                  </MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey = "4" onClick = {(event) => { history.push('/login');}}>
+                  <MenuItem eventKey = "3" onClick = {(event) => { history.push('/login');}}>
                     <span> <i className = "fa fa-sign-out fa-fw" /> Logout </span>
                   </MenuItem>
             </NavDropdown>

@@ -19,17 +19,17 @@ import {
   CartesianGrid, AreaChart, Bar, BarChart,
   ResponsiveContainer } from '../../vendor/recharts';
 
-const title = 'Sb Admin React';
+const title = 'Traffic Management';
 
 
 const data = [
-      { name: 'Page A', uv: 4000, pv: 2400, amt: 2400, value: 600 },
-      { name: 'Page B', uv: 3000, pv: 1398, amt: 2210, value: 300 },
-      { name: 'Page C', uv: 2000, pv: 9800, amt: 2290, value: 500 },
-      { name: 'Page D', uv: 2780, pv: 3908, amt: 2000, value: 400 },
-      { name: 'Page E', uv: 1890, pv: 4800, amt: 2181, value: 200 },
-      { name: 'Page F', uv: 2390, pv: 3800, amt: 2500, value: 700 },
-      { name: 'Page G', uv: 3490, pv: 4300, amt: 2100, value: 100 },
+      { name: 'January', uv: 4000, pv: 2400, amt: 2400, value: 600 },
+      { name: 'Feburary', uv: 3000, pv: 1398, amt: 2210, value: 300 },
+      { name: 'March', uv: 2000, pv: 9800, amt: 2290, value: 500 },
+      { name: 'April', uv: 2780, pv: 3908, amt: 2000, value: 400 },
+      { name: 'May', uv: 1890, pv: 4800, amt: 2181, value: 200 },
+      { name: 'June', uv: 2390, pv: 3800, amt: 2500, value: 700 },
+      { name: 'July', uv: 3490, pv: 4300, amt: 2100, value: 100 },
 ];
 
 function Home(props, context) {
@@ -39,49 +39,6 @@ function Home(props, context) {
       <div className="row">
         <div className="col-lg-12">
           <PageHeader>Dashboard</PageHeader>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-lg-3 col-md-6">
-          <StatWidget
-            style="panel-primary"
-            icon="fa fa-comments fa-5x"
-            count="26"
-            headerText="New Comments!"
-            footerText="View Details"
-            linkTo="/"
-          />
-        </div>
-        <div className="col-lg-3 col-md-6">
-          <StatWidget
-            style="panel-green"
-            icon="fa fa-tasks fa-5x"
-            count="12"
-            headerText="New Tasks!"
-            footerText="View Details"
-            linkTo="/"
-          />
-        </div>
-        <div className="col-lg-3 col-md-6">
-          <StatWidget
-            style="panel-yellow"
-            icon="fa fa-shopping-cart fa-5x"
-            count="124"
-            headerText="New Orders!"
-            footerText="View Details"
-            linkTo="/"
-          />
-        </div>
-        <div className="col-lg-3 col-md-6">
-          <StatWidget
-            style="panel-red"
-            icon="fa fa-support fa-5x"
-            count="13"
-            headerText="Support Tickets!"
-            footerText="View Details"
-            linkTo="/"
-          />
         </div>
       </div>
 
@@ -109,9 +66,9 @@ function Home(props, context) {
                   <YAxis />
                   <CartesianGrid stroke="#ccc" />
                   <Tooltip />
-                  <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
-                  <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-                  <Area type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
+                  <Area type="monotone" dataKey="uv" stackId="1" stroke="#37607f" fill="#37607f" />
+                  <Area type="monotone" dataKey="pv" stackId="1" stroke="#1b7fcc" fill="#1b7fcc" />
+                  <Area type="monotone" dataKey="amt" stackId="1" stroke="#219dfd" fill="#219dfd" />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -139,9 +96,9 @@ function Home(props, context) {
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="pv" stackId="1" fill="#8884d8" />
-                  <Bar dataKey="uv" stackId="1" fill="#82ca9d" />
-                  <Bar type="monotone" dataKey="amt" fill="#ffc658" />
+                  <Bar dataKey="pv" stackId="1" fill="#37607f" />
+                  <Bar dataKey="uv" stackId="1" fill="#1b7fcc" />
+                  <Bar type="monotone" dataKey="amt" fill="#219dfd" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -162,7 +119,7 @@ function Home(props, context) {
                       <h4 className="timeline-title">Lorem ipsum dolor</h4>
                       <p>
                         <small className="text-muted">
-                          <i className="fa fa-clock-o" /> 11 hours ago via Twitter
+                          <i className="fa fa-clock-o" /> 11 hours ago
                         </small>
                       </p>
                     </div>
@@ -229,10 +186,6 @@ function Home(props, context) {
                 <span className="pull-right text-muted small"><em>4 minutes ago</em></span>
               </ListGroupItem>
               <ListGroupItem href="" onClick={(e) => { e.preventDefault(); }}>
-                <i className="fa fa-twitter fa-fw" /> 3 New Followers
-                <span className="pull-right text-muted small"><em>12 minutes ago</em></span>
-              </ListGroupItem>
-              <ListGroupItem href="" onClick={(e) => { e.preventDefault(); }}>
                 <i className="fa fa-envelope fa-fw" /> Message Sent
                 <span className="pull-right text-muted small"><em>27 minutes ago</em></span>
               </ListGroupItem>
@@ -252,14 +205,6 @@ function Home(props, context) {
                 <i className="fa fa-warning fa-fw" /> Server Not Responding
                 <span className="pull-right text-muted small"><em>10:57 AM</em></span>
               </ListGroupItem>
-              <ListGroupItem href="" onClick={(e) => { e.preventDefault(); }}>
-                <i className="fa fa-shopping-cart fa-fw" /> New Order Placed
-                <span className="pull-right text-muted small"><em>9:49 AM</em></span>
-              </ListGroupItem>
-              <ListGroupItem href="" onClick={(e) => { e.preventDefault(); }}>
-                <i className="fa fa-money fa-fw" /> Payment Received
-                <span className="pull-right text-muted small"><em>Yesterday</em></span>
-              </ListGroupItem>
             </ListGroup>
             <Button block>View All Alerts</Button>
           </Panel>
@@ -270,7 +215,7 @@ function Home(props, context) {
             </span>}
           >
             <div>
-              <Donut data={data} color="#8884d8" innerRadius="70%" outerRadius="90%" />
+              <Donut data={data} color="#219dfd" innerRadius="60%" outerRadius="90%" />
             </div>
           </Panel>
 
